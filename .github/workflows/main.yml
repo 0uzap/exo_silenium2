@@ -46,8 +46,7 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - Release
-      uses: rymndhng/release-on-push-action@master
-      with:
-      bump_version_scheme: major
-      use_github_release_notes: true
+      - uses: rymndhng/release-on-push-action@master
+        with:
+          bump_version_scheme: major
+          use_github_release_notes: true
